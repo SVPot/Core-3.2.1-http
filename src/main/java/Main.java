@@ -27,7 +27,7 @@ public class Main {
                     });
 
             facts.stream()
-                    .filter(x -> x.getUpvotes() != null && Integer.parseInt(x.getUpvotes()) > 0)
+                    .filter(x -> x.getUpvotes() != 0)
                     .forEach(System.out::println);
         } finally {
             httpClient.close();
